@@ -20,6 +20,11 @@
         {{ preremove }}
     endscript
 {% endif %}
+{% if definition.postremove|default([]) %}
+    postremove
+        {{ postremove }}
+    endscript
+{% endif %}
 {% if definition.lastaction|default([]) %}
     lastaction
         {{ lastaction }}
