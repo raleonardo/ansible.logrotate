@@ -7,32 +7,32 @@
 {% endfor %}
 {% if definition.prerotate|default([]) %}
     pretrotate
-        {{ pretrotate }}
+        {{ definition.pretrotate }}
     endscript
 {% endif %}
 {% if definition.postrotate|default([]) %}
     postrotate
-        {{ postrotate }}
+        {{ definition.postrotate }}
     endscript
 {% endif %}
 {% if definition.preremove|default([]) %}
     preremove
-        {{ preremove }}
+        {{ definition.preremove }}
     endscript
 {% endif %}
 {% if definition.postremove|default([]) %}
     postremove
-        {{ postremove }}
+        {{ definition.postremove }}
     endscript
 {% endif %}
 {% if definition.lastaction|default([]) %}
     lastaction
-        {{ lastaction }}
+        {{ definition.lastaction }}
     endscript
 {% endif %}
 {% if definition.firstaction|default([]) %}
     firstaction
-        {{ firstaction }}
+        {{ definition.firstaction }}
     endscript
 {% endif %}
 }
