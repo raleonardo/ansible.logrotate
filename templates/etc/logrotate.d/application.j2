@@ -5,32 +5,29 @@
 {% for option in definition.options %}
     {{ option }}
 {% endfor %}
+{% if definition.prerotate|default([]) %}
+    pretrotate
+        {{ pretrotate }}
+    endscript
+{% endif %}
 {% if definition.postrotate|default([]) %}
     postrotate
-{% for line in definition.postrotate %}
-        {{ line }}
-{% endfor %}
+        {{ postrotate }}
     endscript
 {% endif %}
 {% if definition.preremove|default([]) %}
     preremove
-{% for line in definition.preremove %}
-        {{ line }}
-{% endfor %}
+        {{ preremove }}
     endscript
 {% endif %}
 {% if definition.lastaction|default([]) %}
     lastaction
-{% for line in definition.lastaction %}
-        {{ line }}
-{% endfor %}
+        {{ lastaction }}
     endscript
 {% endif %}
 {% if definition.firstaction|default([]) %}
     firstaction
-{% for line in definition.firstaction %}
-        {{ line }}
-{% endfor %}
+        {{ firstaction }}
     endscript
 {% endif %}
 }
